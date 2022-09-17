@@ -3,7 +3,9 @@ Toggle between Light and Dark themes/schemes with minimal code.
 
 
 ## Description
-The goal of this project is to be as minimal as possible. Even though it is possible to implement a profile based solution (e.g. user may define a summer or winter profile), on the current circumstances this is not implemented. Instead, only one dark theme and light theme can be chosen.
+The goal of this project is to be as minimal as possible.
+
+Even though it is possible to implement a profile based solution (e.g. user may define a summer or winter profile), on the current circumstances this is not implemented. Instead, only one dark theme and light theme can be chosen.
 
 ## Requirements
 Neovim

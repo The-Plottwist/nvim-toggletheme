@@ -21,9 +21,7 @@ use "The-Plottwist/nvim-toggletheme"
 Please add the below line to your init.lua after your theme setups (if you have any):
 
 ```lua
-...
 require("toggletheme").setup()
-...
 ```
 
 Then set your themes (only needed once):
