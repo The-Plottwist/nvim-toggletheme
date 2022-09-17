@@ -116,9 +116,9 @@ function M.setup()
 end
 
 -- Make user commands
-vim.api.nvim_create_user_command("ToggleTheme", M.toggle_theme, {})
-vim.api.nvim_create_user_command("SetDarkTheme", M.set_dark_theme, {})
-vim.api.nvim_create_user_command("SetLightTheme", M.set_light_theme, {})
+vim.cmd('command! -nargs=0 ToggleTheme lua require("toggletheme").toggle_theme()')
+vim.cmd('command! -nargs=1 SetLightTheme lua require("toggletheme").set_light_theme("<args>")')
+vim.cmd('command! -nargs=1 SetDarkTheme lua require("toggletheme").set_dark_theme("<args>")')
 
 return M
 
