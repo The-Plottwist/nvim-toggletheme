@@ -32,6 +32,7 @@ local CURRENT_THEME = vim.g.colors_name	--will be modified within the setup()
 -- ┌           ┐
 -- │ FUNCTIONS │
 -- └           ┘
+-- https://stackoverflow.com/questions/1340230/check-if-directory-exists-in-lua
 local function exists(file)
 	local ok, err, code = os.rename(file, file)
 	if not ok then
