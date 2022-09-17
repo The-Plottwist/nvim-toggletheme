@@ -78,8 +78,12 @@ function M.toggle_theme()
 	end
 
 	vim.cmd("colorscheme " .. CURRENT_THEME)
-	require("lualine").refresh()
 	generate_config_file()
+
+	--refresh lualine
+	if package.loaded["lualine"] then
+		require("lualine").refresh()
+	end
 end
 
 function M.setup()
