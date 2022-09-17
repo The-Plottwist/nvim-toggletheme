@@ -67,7 +67,7 @@ end
 
 function M.toggle_theme()
 	if ( DARK_THEME == "NULL" ) or ( LIGHT_THEME == "NULL" ) then
-		vim.notify("Theme-config: Please set a light & dark theme!", "error")
+		vim.notify("Toggle Theme: Please set a light & dark theme!", "error")
 		return
 	end
 
@@ -92,8 +92,8 @@ function M.setup()
 			file:write(CURRENT_THEME, '\n')
 			io.close(file)
 		else
-			vim.notify("Theme-config: Cannot make " .. CONFIG_FILE .. '!', "error")
-			vim.notify("Theme-config: Please make it yourself & make sure it has r+w access!", "error")
+			vim.notify("Toggle Theme: Cannot make " .. CONFIG_FILE .. '!', "error")
+			vim.notify("Toggle Theme: Please make it yourself & make sure it has r+w access!", "error")
 			return
 		end
 	else --read themes
@@ -106,8 +106,8 @@ function M.setup()
 
 			vim.cmd("colorscheme " .. CURRENT_THEME)	--set theme
 		else
-			vim.notify("Theme-config: Cannot open " .. CONFIG_FILE .. '!', "error")
-			vim.notify("Theme-config: Please make sure it has r+w access!", "error")
+			vim.notify("Toggle Theme: Cannot open " .. CONFIG_FILE .. '!', "error")
+			vim.notify("Toggle Theme: Please make sure it has r+w access!", "error")
 			return
 		end
 	end
