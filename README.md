@@ -7,6 +7,9 @@ The goal of this project is to be as minimal as possible.
 
 Even though it is possible to implement a profile based solution (e.g. user may define a summer or winter profile), on the current circumstances this is not implemented. Instead, only one dark theme and light theme can be chosen.
 
+## Screenshot
+![showcase](showcase.gif)
+
 ## Requirements
 Neovim
 
@@ -42,7 +45,6 @@ You can view your themes with:
 ```lua
 :ListActiveThemes
 ```
-
 
 ## Notes
 * You can find the config file with:
