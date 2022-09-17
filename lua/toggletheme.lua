@@ -113,6 +113,9 @@ function M.setup()
 	IS_CONFIG_WRITABLE = true
 end
 
+api.nvim_create_user_command("ToggleTheme", toggle_theme, {})
+api.nvim_create_user_command("SetDarkTheme", set_dark_theme, {})
+api.nvim_create_user_command("SetLightTheme", set_light_theme, {})
 
 return M
 
