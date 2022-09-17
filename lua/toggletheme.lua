@@ -103,6 +103,8 @@ function M.setup()
 			DARK_THEME = file:read()		--read second line
 			CURRENT_THEME = file:read()		--read third line
 			io.close(file)
+
+			vim.cmd("colorscheme " .. CURRENT_THEME)	--set theme
 		else
 			vim.notify("Theme-config: Cannot open " .. CONFIG_FILE .. '!', "error")
 			vim.notify("Theme-config: Please make sure it has r+w access!", "error")
@@ -113,6 +115,7 @@ function M.setup()
 	IS_CONFIG_WRITABLE = true
 end
 
+-- Make user commands
 vim.api.nvim_create_user_command("ToggleTheme", M.toggle_theme, {})
 vim.api.nvim_create_user_command("SetDarkTheme", M.set_dark_theme, {})
 vim.api.nvim_create_user_command("SetLightTheme", M.set_light_theme, {})
