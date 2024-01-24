@@ -17,9 +17,9 @@ Neovim
 None
 
 ## Installation
-Packer:
+Lazy:
 ```lua
-use "The-Plottwist/nvim-toggletheme"
+"The-Plottwist/nvim-toggletheme"
 ```
 
 ## Usage
@@ -47,6 +47,7 @@ You can view your themes with:
 ```
 
 ## Notes
+* You may need to close and re-enter Neovim after toggling (some plugins needs refreshment)
 * You can find the config file with:
 	```lua
 	:lua print(vim.fn.stdpath("config") .. "/default_themes.txt")
