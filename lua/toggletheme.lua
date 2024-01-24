@@ -73,8 +73,10 @@ function M.toggle_theme()
 	end
 
 	if CURRENT_THEME == LIGHT_THEME then
+		vim.cmd("set background=dark")
 		CURRENT_THEME = DARK_THEME
 	else
+		vim.cmd("set background=light")
 		CURRENT_THEME = LIGHT_THEME
 	end
 
@@ -108,8 +110,6 @@ function M.setup()
 			DARK_THEME = file:read()		--read second line
 			CURRENT_THEME = file:read()		--read third line
 			io.close(file)
-
-			vim.cmd("colorscheme " .. CURRENT_THEME)	--set theme
 		else
 			vim.notify("Cannot open " .. CONFIG_FILE .. '!', "error", { title = "Toggle Theme" })
 			vim.notify("Please make sure it has r+w access!", "error", { title = "Toggle Theme" })
@@ -118,6 +118,14 @@ function M.setup()
 	end
 
 	IS_CONFIG_WRITABLE = true
+
+	--set theme on startup
+	if CURRENT_THEME == LIGHT_THEME then
+		vim.cmd("set background=light")
+	else
+		vim.cmd("set background=dark")
+	end
+	vim.cmd("colorscheme " .. CURRENT_THEME)
 end
 
 function M.list_active_themes()
